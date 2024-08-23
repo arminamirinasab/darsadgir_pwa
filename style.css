@@ -1,6 +1,6 @@
 @font-face{
-    font-family: "yekan";
-    src: local("B Yekan"), local("2  Yekan"), url("./BYekan.ttf");
+    font-family: "Behdad";
+    src: local("Behdad"), url("./Behdad-Regular.ttf");
     font-display: swap;
 }
 @-webkit-keyframes animatezoom {
@@ -17,9 +17,8 @@
     padding: 0;
     margin: 0;
     direction: rtl;
-    /* font-family: Arial, Helvetica, sans-serif; */
     box-sizing: border-box;
-    font-family: "yekan" !important;
+    font-family: "Behdad" !important;
 }
 h1, h2, h3 {
     font-weight: bold;
@@ -138,11 +137,11 @@ body {
     box-shadow: 0px 0px 1px 1px rgb(218, 218, 218)
 }
 #settings .box h3 {
-    margin-bottom: 7px;
+    margin-bottom: 10px;
 }
 #settings .box p {
-    margin-top: 4px;
-    line-height: 1.25;
+    margin-top: 10px;
+    line-height: 1.5;
 }
 
 

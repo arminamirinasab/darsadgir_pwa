@@ -12,15 +12,16 @@ function calculator() {
     var correct = parseInt(document.getElementById("corrects").value);
     var incorrect = parseInt(document.getElementById("incorrects").value);
     var numofques = parseInt(document.getElementById("numofquestions").value);
+    var nones = parseInt(document.getElementById("nones").value);
 
-    const inputs = [correct, incorrect, numofques]
+    const inputs = [correct, incorrect, numofques, nones]
     for (var num in inputs) {
         if(isNaN(inputs[num])) {
             popup("لطفا فرم‌ها را پر کنید و تنها از کیبورد انگلیسی استفاده کنید. ", "", "larger");
             return;
         }
     }
-    if (correct + incorrect > numofques) {
+    if (correct + incorrect + nones > numofques) {
         popup("فرم را دوباره بررسی کنید. چنین چیزی امکان ندارد", "img/pokerface", "larger")
         return;
     }
@@ -43,7 +44,6 @@ function calculator() {
     showToUser(result)
 }
 function showToUser(input) {
-    // var final = "نتیجه: "
     var final = "";
     input = input.toFixed(2);
     final += input.toString() + "%";
@@ -111,16 +111,6 @@ function popup(msg, imgloc, size) {
             img.classList.add("not_showing");
         }
     }
-    // if(window.devicewidth > 600) {
-    //     imgloc += "-256.png";
-    //     img.width = 256;
-    //     img.height = 256;
-    // } else {
-    //     imgloc += "-200.png";
-    //     img.width = 200;
-    //     img.height = 200;
-    // }
-    // img.src = imgloc;
     if(size != "") {
         p.style.fontSize = size;
     } else {
